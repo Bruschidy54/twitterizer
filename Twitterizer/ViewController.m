@@ -8,20 +8,28 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+
+    
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)twitterizerButton:(UIButton *)sender {
+}
+- (IBAction)hashtagButton:(UIButton *)sender {
+}
+- (IBAction)reverseButton:(UIButton *)sender {
 }
 
 @end
