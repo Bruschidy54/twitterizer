@@ -68,17 +68,26 @@
 
 }
 - (IBAction)hashtagButton:(UIButton *)sender {
-    NSMutableString *hashtag = [[NSMutableString alloc] initWithString: self.textView.text];
-    NSMutableString *hashtagString = [[NSMutableString alloc] initWithString:@"#"];
+    NSMutableString *hashtagString = [NSMutableString stringWithString:self.textView.text];
+    NSLog(@"%@",hashtagString);
+    NSString *blankString = @" ";
+    for (int i = 0; i < self.textView.text.length; i++) {
+        
+        if ([[NSString stringWithFormat:@"%c" , [self.textView.text characterAtIndex:i]]  isEqual: blankString]) {
+            [hashtagString insertString:@" #" atIndex:i];
+        }
+        else {
+            
+        }
+    }
     
-    NSRange r;
-    
-    for (int i = 0; i < [hashtag length]; <#increment#>) {
-        <#statements#>
+    self.textView.text = hashtagString;
+  
+   
     }
     
     
-}
+
 
 
 
