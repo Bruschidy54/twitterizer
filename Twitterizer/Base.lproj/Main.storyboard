@@ -37,6 +37,9 @@
                                 <rect key="frame" x="222" y="237" width="58" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hashtag"/>
+                                <connections>
+                                    <action selector="hashtagButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hln-AS-Qid"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="LId-Y1-8aB">
                                 <rect key="frame" x="41" y="28" width="239" height="128"/>

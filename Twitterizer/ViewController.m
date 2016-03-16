@@ -67,6 +67,18 @@
         self.textView.text = consonant;
 
 }
+- (IBAction)hashtagButton:(UIButton *)sender {
+    NSMutableString *hashtag = [[NSMutableString alloc] initWithString: self.textView.text];
+    NSMutableString *hashtagString = [[NSMutableString alloc] initWithString:@"#"];
+    
+    NSRange r;
+    
+    for (int i = 0; i < [hashtag length]; <#increment#>) {
+        <#statements#>
+    }
+    
+    
+}
 
 
 
