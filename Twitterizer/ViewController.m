@@ -24,11 +24,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    NSString *words = self.textView.text;
-    NSUInteger count = words.length;
-    self.label.text = @"Count: %i", count;
-    
+}
+
+-(void)textViewDidChange:(UITextView *)textView
+{
+    int len = textView.text.length;
+    self.label.text=[NSString stringWithFormat:@"Count: %i",len-1];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if([text length] == 0)
+    {
+        if([textView.text length] != 0)
+        {
+            return YES;
+        }
+    }
+    else if([[textView text] length] > 140)
+    {
+        return NO;
+    }
+    return YES;
 }
 
 - (IBAction)twitterizerButton:(UIButton *)sender {
@@ -48,7 +65,6 @@
         
     }
         self.textView.text = consonant;
-    
 
 }
 
@@ -57,3 +73,4 @@
 
 
 @end
+
