@@ -9,7 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController () <UITextViewDelegate>
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITextView *uiTextView;
+
 
 @end
 
@@ -19,17 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
     
-
+    
 }
 
-- (IBAction)twitterizerButton:(UIButton *)sender {
-}
-- (IBAction)hashtagButton:(UIButton *)sender {
-}
-- (IBAction)reverseButton:(UIButton *)sender {
-}
+
+
+
+
+
 
 @end
